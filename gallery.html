@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТАЙЦЗИ — Галерея</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="header-nav">
+        <div class="nav-group">
+          <a href="index.html#gallery" class="nav-btn">Галерея</a>
+          <a href="index.html#services" class="nav-btn">Услуги</a>
+        </div>
+
+        <a href="index.html#top">
+          <img src="Без имени-kjjju.png" alt="ТАЙЦЗИ" class="header-logo" />
+        </a>
+
+        <div class="nav-group">
+          <a href="index.html#menu" class="nav-btn">Меню</a>
+          <a href="index.html#booking" class="nav-btn">Бронь</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="gallery-container">
+      <div class="gallery-layout-grid">
+        <img src="main.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="second.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="main.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="second.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="main.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="second.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="main.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="second.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="main.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="second.jpg" alt="Интерьер" class="gallery-view-img" />
+        <img src="мужик.png" alt="Интерьер" class="gallery-view-img" />
+      </div>
+    </main>
+
+    <div id="photoViewer" class="photo-viewer">
+      <span class="close-viewer">&times;</span>
+      <button class="viewer-arrow prev-arrow">❮</button>
+      <img class="viewer-img-content" id="viewerTargetImg" src="" />
+      <button class="viewer-arrow next-arrow">❯</button>
+    </div>
+
+    <script src="gallery-script.js"></script>
+  </body>
+</html>

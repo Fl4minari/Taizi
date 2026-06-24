@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТАЙЦЗИ — Меню</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="header-nav">
+        <div class="nav-group">
+          <a href="gallery.html" class="nav-btn">Галерея</a>
+          <a href="index.html#services" class="nav-btn">Услуги</a>
+        </div>
+        <a href="index.html#top">
+          <img src="Без имени-kjjju.png" alt="ТАЙЦЗИ" class="header-logo" />
+        </a>
+        <div class="nav-group">
+          <a href="index.html#menu" class="nav-btn">Меню</a>
+          <a href="index.html#booking" class="nav-btn">Бронь</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="menu-container">
+      <!-- Сетка категорий -->
+      <div class="menu-categories-grid">
+        <button class="category-filter-btn" data-category="main">
+          Основное
+        </button>
+        <button class="category-filter-btn" data-category="soups">Супы</button>
+        <button class="category-filter-btn" data-category="salads">
+          Салаты
+        </button>
+        <button class="category-filter-btn" data-category="desserts">
+          Десерты
+        </button>
+        <button class="category-filter-btn" data-category="drinks">
+          Напитки
+        </button>
+        <button class="category-filter-btn" data-category="sharing">
+          Общий стол
+        </button>
+      </div>
+
+      <!-- Блок фильтров с новыми диапазонами (8000р и 3000г) -->
+      <div class="menu-ranges-panel">
+        <div class="range-control-group">
+          <div class="range-labels">
+            <span>0р</span>
+            <span class="range-current"
+              >Выбрано до: <span id="priceValue">8000</span>р</span
+            >
+            <span>8000р</span>
+          </div>
+          <input
+            type="range"
+            id="priceRange"
+            min="0"
+            max="8000"
+            value="8000"
+            step="100"
+          />
+        </div>
+
+        <div class="range-control-group">
+          <div class="range-labels">
+            <span>0г</span>
+            <span class="range-current"
+              >Выбрано до: <span id="weightValue">3000</span>г</span
+            >
+            <span>3000г</span>
+          </div>
+          <input
+            type="range"
+            id="weightRange"
+            min="0"
+            max="3000"
+            value="3000"
+            step="50"
+          />
+        </div>
+      </div>
+
+      <!-- Сетка блюд (сами блюда и их данные не менялись) -->
+      <div class="menu-dishes-grid">
+        <div
+          class="dish-card"
+          data-category="main"
+          data-price="600"
+          data-weight="350"
+        >
+          <img src="dish1.png" alt="Нечто с рисом" class="dish-card-img" />
+          <p class="dish-card-weight">350г</p>
+          <h3 class="dish-card-title">Нечто с рисом</h3>
+          <div class="dish-card-price-box">600р</div>
+        </div>
+
+        <div
+          class="dish-card"
+          data-category="soups"
+          data-price="500"
+          data-weight="400"
+        >
+          <img src="dish2.png" alt="Суп Вонтон" class="dish-card-img" />
+          <p class="dish-card-weight">400г</p>
+          <h3 class="dish-card-title">Какой-то суп</h3>
+          <div class="dish-card-price-box">500р</div>
+        </div>
+
+        <div
+          class="dish-card"
+          data-category="sharing"
+          data-price="1500"
+          data-weight="1200"
+        >
+          <img src="dish3.png" alt="Сет Хого" class="dish-card-img" />
+          <p class="dish-card-weight">1200г</p>
+          <h3 class="dish-card-title">Закуска</h3>
+          <div class="dish-card-price-box">1500р</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="menu-script.js"></script>
+  </body>
+</html>
