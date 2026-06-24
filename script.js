@@ -148,3 +148,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const homeHeader = document.querySelector(".home-header");
+
+  if (homeHeader) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 120) {
+        homeHeader.classList.add("visible");
+      } else {
+        homeHeader.classList.remove("visible");
+      }
+    });
+  }
+});

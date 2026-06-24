@@ -8,11 +8,11 @@
   </head>
 
   <body>
-    <header class="main-header">
+    <header class="main-header home-header">
       <nav class="header-nav">
         <div class="nav-group">
           <a href="#gallery" class="nav-btn"> Галерея </a>
-          <a href="#services" class="nav-btn"> Услуги </a>
+          <a href="#services" class="nav-btn"> Форматы </a>
         </div>
 
         <a href="#top">
@@ -59,13 +59,23 @@
         <div class="gallery-left-block">
           <div class="gallery-img-wrapper">
             <img
-              src="main.jpg"
+              src="room2.png"
               alt="Интерьер ресторана Тайцзи"
               class="gallery-main-img active"
             />
             <img
               src="second.jpg"
               alt="Интерьер ресторана Тайцзи 2"
+              class="gallery-main-img"
+            />
+            <img
+              src="room3.png"
+              alt="Интерьер ресторана Тайцзи 3"
+              class="gallery-main-img"
+            />
+            <img
+              src="main.jpg"
+              alt="Интерьер ресторана Тайцзи 3"
               class="gallery-main-img"
             />
           </div>
@@ -94,8 +104,8 @@
       <div class="gallery-inner-container">
         <div class="gallery-right-block">
           <p class="gallery-text">
-            Каждое блюдо в меню — это баланс пяти вкусов, созданный по канонам
-            традиционной китайской медицины для гармонии тела и духа
+            В меню собраны лучшие блюда Поднебесной и Азии, а также секретные
+            находки наших Шифу, вдохновленные эстетикой ресторана
           </p>
         </div>
 
@@ -136,7 +146,7 @@
             <button class="gallery-arrow services-prev-btn">
               <img src="arrow-left.svg" alt="Назад" />
             </button>
-            <a href="services.html" class="gallery-btn">Услуги</a>
+            <a href="services.html" class="gallery-btn">Форматы</a>
             <button class="gallery-arrow services-next-btn">
               <img src="arrow-right.svg" alt="Вперед" />
             </button>
@@ -154,6 +164,44 @@
 
     <section class="booking-section" id="booking">
       <div class="booking-container">
+
+
+      <div class="booking-container">
+
+  <div class="booking-side-badge side-left-badge">
+    <div class="badge-item">
+      <span class="badge-label">Телефон</span>
+      <a href="tel:+78129876543" class="badge-value">+7 (812) 987-65-43</a>
+    </div>
+    <div class="badge-item">
+      <span class="badge-label">Почта</span>
+      <a href="mailto:taizi@gmail.com" class="badge-value">taizi@gmail.com</a>
+    </div>
+    <div class="badge-item">
+      <span class="badge-label">Социальные сети</span>
+      <div class="badge-links">
+        <a href="#" class="badge-link">TG</a>
+        <span class="badge-sep">/</span>
+        <a href="#" class="badge-link">VK</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="booking-side-badge side-right-badge">
+    <div class="badge-item">
+      <span class="badge-label">Адрес</span>
+      <p class="badge-value">       г. Санкт-Петербург,
+наб. реки Карповки, д. 5</p>
+    </div>
+    <div class="badge-item">
+      <span class="badge-label">Часы работы</span>
+      <p class="badge-value">Пн — Вс: 12:00 — 00:00</p>
+    </div>
+  </div>
+
+  
+
+
         <h2 class="booking-title">Ждем Вас!</h2>
 
         <form class="booking-form" id="bookingform">
@@ -180,8 +228,11 @@
           <div class="form-row">
             <select name="service" required class="booking-select">
               <option value="" disabled selected hidden>Услуга</option>
+
               <option value="dinner">Ужин</option>
+
               <option value="master-class">Мастер-класс</option>
+
               <option value="master-class">Представление</option>
             </select>
           </div>
@@ -191,11 +242,17 @@
               <option value="" disabled selected hidden>
                 Количество гостей
               </option>
+
               <option value="1">1 гость</option>
+
               <option value="2">2 гостей</option>
+
               <option value="3">3 гостей</option>
+
               <option value="4">4 гостя</option>
+
               <option value="5">5 гостей</option>
+
               <option value="6">6+ гостей</option>
             </select>
           </div>
@@ -203,25 +260,35 @@
           <div class="form-row">
             <select name="room" required class="booking-select">
               <option value="" disabled selected hidden>Комната</option>
+
               <option value="room1">Комната 1</option>
+
               <option value="room2">Комната 2</option>
+
               <option value="room3">Комната 3</option>
             </select>
           </div>
 
           <div class="booking-calendar-wrapper">
             <input type="hidden" id="selectedDate" name="date" required />
+
             <input type="hidden" id="selectedTime" name="time" required />
 
             <div
               class="calendar-header"
               style="
                 text-align: center;
+
                 color: #ffffff;
+
                 font-family: &quot;Iosevka Sharon&quot;, monospace;
+
                 font-size: 18px;
+
                 font-style: italic;
+
                 margin-top: 40px;
+
                 margin-bottom: 15px;
               "
             >
@@ -232,13 +299,16 @@
 
             <div class="time-slots-container" id="timeSlotsContainer">
               <p class="time-slots-title">Доступное время:</p>
+
               <div class="time-slots-grid">
                 <button type="button" class="time-btn" data-time="18:00">
                   18:00
                 </button>
+
                 <button type="button" class="time-btn" data-time="19:30">
                   19:30
                 </button>
+
                 <button type="button" class="time-btn" data-time="21:00">
                   21:00
                 </button>
@@ -253,6 +323,7 @@
 
         <div class="booking-success-message" id="successMessage">
           <div class="success-text-title">Запрос принят</div>
+
           <div class="success-text-desc">
             Наш сотрудник свяжется с Вами в ближайшее время для подтверждения
             брони

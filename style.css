@@ -23,25 +23,32 @@ html {
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 .main-logo {
   display: block;
-  max-width: 500px;
-  height: 500px;
+  max-width: 900px;
+  height: auto;
   margin: 0 auto;
+  margin-top: -400px;
+  margin-bottom: -330px;
+  position: relative;
+  z-index: 1;
 }
 
 .main-subtitle {
   font-family: "Iosevka Charon", monospace;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 250;
   font-style: italic;
   letter-spacing: 3px;
   color: #666666;
   display: block;
-  margin-top: -120px;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .main-header {
@@ -54,6 +61,20 @@ html {
   z-index: 100;
   display: flex;
   justify-content: center;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.home-header {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.home-header.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .header-nav {
@@ -315,7 +336,7 @@ html {
 
 .booking-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   text-align: center;
   position: relative;
 }
@@ -858,4 +879,73 @@ body > div {
   line-height: 1.6;
   color: #555555;
   margin: 0;
+}
+
+/* 1. Делаем контейнер главным ориентиром для абсолютных блоков */
+.booking-container {
+  position: relative; /* Форма центрируется как обычно, но теперь внутри нее можно фиксировать элементы по бокам */
+}
+
+/* 2. Общие стили для левого и правого блоков */
+.booking-side-badge {
+  position: absolute;
+  /* Регулируй этот top, чтобы поднять или опустить блоки идеально под уровень полей ввода */
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  z-index: 10;
+}
+
+/* 3. Левый блок прижимаем к левому краю контейнера */
+.side-left-badge {
+  position: absolute;
+  top: 500px;
+  left: -300px;
+  text-align: left;
+}
+
+/* 4. Правый блок прижимаем к правому краю контейнера */
+.side-right-badge {
+  position: absolute;
+  top: 525px;
+  right: -350px;
+  text-align: right;
+}
+
+/* 5. Красивое минималистичное оформление текста */
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.badge-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  opacity: 0.4;
+}
+
+.badge-value,
+.badge-link {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.badge-links {
+  display: flex;
+  gap: 8px;
+}
+
+.side-right-badge .badge-links {
+  justify-content: flex-end;
+}
+
+.badge-sep {
+  color: #ffffff;
+  opacity: 0.3;
 }
